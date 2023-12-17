@@ -22,3 +22,19 @@ apt install libxdamage1 -y
 apt install libxi6 libxtst6 libxrender1 -y
 apt install libasound2 -y
 apt install libxkbfile1 -y
+apt install language-pack-zh-hans -y
+
+# /etc/environment
+echo "LANG=\"zh_CN.UTF-8\"" >> /etc/environment
+echo "LANGUAGE=\"zh_CN:zh:en_US:en\"" >> /etc/environment
+
+# /var/lib/locales/supported.d/local
+echo "en_US.UTF-8 UTF-8" >> /var/lib/locales/supported.d/local
+echo "zh_CN.UTF-8 UTF-8" >> /var/lib/locales/supported.d/local
+echo "zh_CN.GBK GBK" >> /var/lib/locales/supported.d/local
+echo "zh_CN GB2312" >> /var/lib/locales/supported.d/local
+
+locale-gen
+
+apt install fonts-droid-fallback ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming -y
+
