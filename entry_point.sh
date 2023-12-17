@@ -4,12 +4,13 @@ echo "Please mount the /tmp/.X11-unix to host"
 echo "Please set DISPLAY env variable"
 
 xhost + local:
-if [ "${IBUS_ADDRESS}" = "" ]
+if [ "${IBUS_DEAMON_ADDRESS}" = "" ]
 then
     echo "Using container ibus"
     ibus-daemon -drx
-    ibus engine pinyin
 fi
+
+ibus engine pinyin
 
 if [ "$ENTRY_POINT" != "" ]
 then
