@@ -4,6 +4,8 @@ echo "Please mount the /tmp/.X11-unix to host"
 echo "Please set DISPLAY env variable"
 
 xhost + local:
+ibus-daemon -drx
+ibus engine pinyin
 
 if [ "$ENTRY_POINT" != "" ]
 then
