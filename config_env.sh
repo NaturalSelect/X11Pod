@@ -11,5 +11,3 @@ echo "zh_CN.GBK GBK" >> /var/lib/locales/supported.d/local
 echo "zh_CN GB2312" >> /var/lib/locales/supported.d/local
 
 locale-gen
-
-gsettings set org.freedesktop.ibus.general preload-engines "['pinyin']"

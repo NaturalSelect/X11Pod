@@ -13,7 +13,7 @@ ENV "ENTRY_POINT"="/tmp/myentry_point.sh"
 
 Please don't use `ENTRY_POINT` command.
 
-You also need to set `$IBUS_ADDRESS` in host.
+You also can to set `$IBUS_ADDRESS` in host, so container using shared ibus daemon.
 
 ## Build
 
