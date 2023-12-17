@@ -38,3 +38,7 @@ locale-gen
 
 apt install fonts-droid-fallback ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming -y
 
+apt install ibus -y
+apt install ibus-gtk ibus-gtk3 -y
+apt install ibus-pinyin -y
+
