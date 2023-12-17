@@ -10,6 +10,11 @@ apt install libsqlite3-dev -y
 apt install curl -y
 apt install language-pack-zh-hans -y
 apt install dbus -y
+apt install libbgm1 -y
+apt install libasound2 -y
+apt install libgl1 -y
+apt install libegl1 -y
+
 
 # /etc/environment
 echo "LANG=\"zh_CN.UTF-8\"" >> /etc/environment
