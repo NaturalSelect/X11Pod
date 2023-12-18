@@ -43,5 +43,6 @@ ENV HOME /home/user
 RUN useradd --create-home --home-dir $HOME user \
 	&& chown -R user:user $HOME
 RUN echo 'user ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+RUN chown user /home/user
 
 WORKDIR $HOME
