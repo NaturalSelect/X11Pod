@@ -1,10 +1,5 @@
-# X11 Pod
+#!/bin/bash
 
-A base docker image to run GUI application.
-
-## Run
-
-```bash
 docker run \
     --rm \
     -it \
@@ -22,4 +17,3 @@ docker run \
     -e HTTP_PROXY="" \
     -e HTTPS_PROXY="" \
     "x11pod:latest"
-```
