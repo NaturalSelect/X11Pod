@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build . -t x11pod:latest
+docker build . -t naturalselect/x11pod:latest

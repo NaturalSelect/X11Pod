@@ -16,4 +16,4 @@ docker run \
     --ipc host \
     -e HTTP_PROXY="" \
     -e HTTPS_PROXY="" \
-    "x11pod:latest"
+    "naturalselect/x11pod:latest"

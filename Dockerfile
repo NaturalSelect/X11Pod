@@ -27,8 +27,7 @@ RUN apt-get update && apt-get -y install \
 	libxtst6 \
 	openssh-client \
     gedit \
-	--no-install-recommends \
-	&& rm -rf /var/lib/apt/lists/*
+	--no-install-recommends
 
 # Chinese
 RUN apt-get update && apt-get install language-pack-zh-hans fonts-droid-fallback ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming -y
@@ -39,10 +38,12 @@ RUN localedef -i zh_CN -c -f UTF-8 zh_CN.UTF-8
 
 # User
 RUN apt-get install sudo -y
+RUN chown root /usr/bin/sudo
 ENV HOME /home/user
 RUN useradd --create-home --home-dir $HOME user \
 	&& chown -R user:user $HOME
 RUN echo 'user ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-RUN chown user /home/user
+
+RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR $HOME
