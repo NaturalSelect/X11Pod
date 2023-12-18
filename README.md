@@ -2,6 +2,12 @@
 
 A base docker image to run GUI application.
 
+## Build
+
+```bash
+make image
+```
+
 ## Run
 
 ```bash
@@ -22,4 +28,10 @@ docker run \
     -e HTTP_PROXY="" \
     -e HTTPS_PROXY="" \
     "x11pod:latest"
+```
+
+or
+
+```bash
+make run
 ```

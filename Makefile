@@ -1,7 +1,7 @@
-DOCKER="docker"
+BASH="bash"
 
 image:
-	./build_image.sh
+	${BASH} ./build_image.sh
 
 run:
-	./run.sh
+	${BASH} ./run.sh
