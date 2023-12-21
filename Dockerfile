@@ -36,9 +36,12 @@ ENV \
   LC_ALL=zh_CN.UTF-8
 RUN localedef -i zh_CN -c -f UTF-8 zh_CN.UTF-8
 
+# Sound
+RUN apt-get install -y pulseaudio pulseaudio-utils
+
 # User
 RUN apt-get install sudo -y
-RUN chown root /usr/bin/sudo
+RUN chown root:root /usr/bin/sudo
 ENV HOME /home/user
 RUN useradd --create-home --home-dir $HOME user \
 	&& chown -R user:user $HOME
