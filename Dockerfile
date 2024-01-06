@@ -41,7 +41,7 @@ RUN apt-get install -y pulseaudio pulseaudio-utils
 
 # User
 RUN apt-get install sudo -y
-RUN chown root:root /usr/bin/sudo
+RUN chown root:root /usr/bin/sudo && chmod 4755 /usr/bin/sudo
 ENV HOME /home/user
 RUN useradd --create-home --home-dir $HOME user \
 	&& chown -R user:user $HOME
