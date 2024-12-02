@@ -3,6 +3,7 @@ LABEL maintainer "NaturalSelect<2145973003@qq.com>"
 
 
 # Basic Packages
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get -y install \
 	git \
 	libasound2 \
@@ -26,14 +27,15 @@ RUN apt-get update && apt-get -y install \
 	libxss1 \
 	libxtst6 \
 	openssh-client \
-    gedit \
+	gedit \
+	tzdata \
 	--no-install-recommends
 
 # Chinese
 RUN apt-get update && apt-get install language-pack-zh-hans fonts-droid-fallback ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming -y
 ENV \
-  LANG=zh_CN.UTF-8 \
-  LC_ALL=zh_CN.UTF-8
+	LANG=zh_CN.UTF-8 \
+	LC_ALL=zh_CN.UTF-8
 RUN localedef -i zh_CN -c -f UTF-8 zh_CN.UTF-8
 
 # Sound
